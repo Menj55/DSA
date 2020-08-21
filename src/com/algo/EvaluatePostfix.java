@@ -3,6 +3,7 @@ package com.algo;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
+//Evaluate the value of postfix expression
 public class EvaluatePostfix {
 
 	private int evaluatePostfix(String str) {

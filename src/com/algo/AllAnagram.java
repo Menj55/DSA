@@ -3,6 +3,7 @@ package com.algo;
 import java.util.ArrayList;
 import java.util.List;
 
+//Find All Anagrams/Permutaations of a Given String and Array
 public class AllAnagram {
 
 	private String swap(String str, int x, int y) {
@@ -38,7 +39,6 @@ public class AllAnagram {
 		if(start == end) {
 			if(!list.contains(str))
 				list.add(str);
-//			System.out.println(str);
 		} else {
 			for(int i=start; i<=end; i++) {
 				str = swap(str, start,i);
@@ -49,7 +49,6 @@ public class AllAnagram {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String str = "123";
 		AllAnagram a = new AllAnagram();
 		List<String> list = new ArrayList<>();

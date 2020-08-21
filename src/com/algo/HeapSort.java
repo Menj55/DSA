@@ -1,5 +1,7 @@
 package com.algo;
 
+
+//Sort an array using Heap Sort
 public class HeapSort {
 
 	public void swap(int arr[], int x, int y) {

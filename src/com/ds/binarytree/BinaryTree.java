@@ -2,15 +2,13 @@ package com.ds.binarytree;
 
 import java.util.Stack;
 
-
-
 class Height{
 	int h;
 }
 
 public class BinaryTree {
 
-	public Node getBST() {
+	public Node getBT() {
 		Node temp = new Node(15);
 		temp.left = new Node(0);
 		Node root = new Node(1);
@@ -26,6 +24,22 @@ public class BinaryTree {
 		root.left.right.right.right = new Node(11);
 		temp.left.left = root;
 		return temp;
+	}
+	
+	public Node getBST() {
+		Node root = new Node(8);
+		root.left = new Node(4);
+		root.left.left = new Node(2);
+		root.left.left.left = new Node(1);
+		root.left.left.right = new Node(3);
+		root.left.right = new Node(7);
+		root.right = new Node(12);
+		root.right.left = new Node(10);
+		root.right.left.right = new Node(11);
+		root.right.right = new Node(15);
+		root.right.right.left = new Node(13);
+		
+		return root;
 	}
 	
 	public void printInorder(Node root) {

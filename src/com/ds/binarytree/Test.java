@@ -7,26 +7,24 @@ import java.util.List;
 
 public class Test {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		System.out.println(-8>>1);
-//		System.out.println(-8>>>1);
-		List<String> l = new ArrayList<>();
-		l.add("Hello");
-		l.add("World");
-		l.add("Howdy");
-		
-		Iterator< String> it = l.iterator();
-		
-		while(it.hasNext()) {
-			System.out.println(it.next());
+	private void recursiveFn(Node head, int num) {
+		if(num == 0) {
+			head.data = 2; //2
+		} else {
+
+			recursiveFn(head, num-1);
+			System.out.println(num + "  -  "+ head.data);
 		}
+			
 		
-//		l.forEach(action);
+	}
+	
+	public static void main(String[] args) {
+		Test t = new Test();
+		Node head = new Node(100); //1
+		t.recursiveFn(head, 5);
+		System.out.println(head.data);
 		
-//		HashMap<String,String> map = new HashMap<>();
-//		System.out.println(map.put("name", "natwar"));
-//		System.out.println(map.put("name", "natwar123"));
 	}
 
 }

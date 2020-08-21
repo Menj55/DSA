@@ -1,5 +1,6 @@
 package com.algo;
 
+//Sort an array of 0'1, 1's and 2's
 public class DutchNationalFlag {
 
 	private void swap(int []arr, int x, int y) {
