@@ -2,7 +2,7 @@ package com.algo;
 
 public class SmallestContigiousSubarraySum {
 
-	private static void minSubarray(int[] arr, int sum) {
+	private static void printMinSubarrays(int[] arr, int sum) {
 
 		int n = arr.length;
 		int curr = 0;
@@ -23,7 +23,46 @@ public class SmallestContigiousSubarraySum {
 				}
 			}
 		}
+	}
+	
+	private static int minSubarray(int[] arr, int sum) {
+
+		int n = arr.length;
 		
+		int start = 0;
+		
+		int end = 0;
+		
+		int currSum = 0;
+		
+		int minSize = Integer.MAX_VALUE;
+		
+//		for(end = start; end <n; end++) {
+//			currSum += arr[end];
+//			
+//			if(currSum >= sum)
+//				break;
+//		}
+//		minSize = end - start + 1;
+//		System.out.println("MinSize = " + minSize);
+		for(end = 0; end<n;end++) {
+			currSum += arr[end];
+			
+			while(currSum >= sum) {
+				minSize = Math.min(minSize, end-start+1);
+				currSum -= arr[start];
+				start++;
+			}
+			
+			
+			
+//			System.out.println("Start = " + start +" End = "+ end);
+//			if(minSize > end-start+1) {
+//				minSize = end-start+1;
+//			}
+		}
+		
+		return minSize;
 	
 	}
 	
@@ -32,9 +71,12 @@ public class SmallestContigiousSubarraySum {
 
 		int arr[] = {3, 4, 1, 1, 6};
 		int sum = 8;
+		printMinSubarrays(arr, sum);
+		System.out.println();
 		
-//		int ans[] = 
-				minSubarray(arr, sum);
+		System.out.println("Min Sisze is :");
+		System.out.println(minSubarray(arr, sum));
+		
 	}
 
 }
