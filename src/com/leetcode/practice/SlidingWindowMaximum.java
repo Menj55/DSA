@@ -1,4 +1,4 @@
-package com.algo;
+package com.leetcode.practice;
 
 public class SlidingWindowMaximum {
 

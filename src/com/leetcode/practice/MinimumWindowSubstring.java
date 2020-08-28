@@ -1,4 +1,4 @@
-package com.algo;
+package com.leetcode.practice;
 
 import java.util.HashMap;
 import java.util.Map;
